@@ -46,7 +46,15 @@ Please note that this plugin was created more or less as a joke. I mainly wanted
 
 ## installation
 
-> Note that this plugin is only supported on `x84_64` architectures, see [compatibility](#compatibility) for more info. If you don't know what this means, you're probably fine.
+> Note that the Hyprland plugin is only supported on `x84_64` architectures, see [compatibility](#compatibility) for more info. If you don't know what this means, you're probably fine.
+
+### niri Support
+
+A Rust-based port for the [niri window manager](https://github.com/YaLTeR/niri) is available in the `niri-dynamic-cursors/` directory. Since niri doesn't have a plugin system, this implementation is designed to be integrated directly into niri. See [niri-dynamic-cursors/README.md](niri-dynamic-cursors/README.md) for details.
+
+**Current Status**: Experimental - The Rust library is functional, but requires integration into niri's source code. See [niri-dynamic-cursors/INTEGRATION.md](niri-dynamic-cursors/INTEGRATION.md) for integration instructions.
+
+### Hyprland Installation
 
 ### hyprpm
 

@@ -1,0 +1,26 @@
+[package]
+name = "niri-dynamic-cursors"
+version = "0.1.0"
+edition = "2021"
+authors = ["Virt", "Community Contributors"]
+description = "Dynamic cursor effects for niri window manager - makes cursors more realistic with rotation, tilt, and shake-to-find"
+license = "MIT"
+repository = "https://github.com/virtcode/hypr-dynamic-cursors"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+toml = "0.8"
+log = "0.4"
+env_logger = "0.11"
+
+# Note: When integrating with niri, you'll have access to niri's dependencies
+# This library is designed to be lightweight and dependency-minimal
+# The actual rendering integration will use niri's existing rendering infrastructure
+
+[lib]
+name = "niri_dynamic_cursors"
+crate-type = ["cdylib", "rlib"]
+
+[[example]]
+name = "standalone"
+path = "examples/standalone.rs"

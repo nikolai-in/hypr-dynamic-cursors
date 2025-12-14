@@ -1,0 +1,63 @@
+enabled = true
+mode = "tilt"
+threshold = 2.0
+
+[rotate]
+# Length in pixels of the simulated stick used to rotate the cursor
+# Most realistic if this matches your actual cursor size
+length = 20.0
+
+# Clockwise offset applied to the angle in degrees
+offset = 0.0
+
+[tilt]
+# Controls how powerful the tilt is (speed in px/s for full tilt of 60°)
+limit = 5000.0
+
+# Activation function: "linear", "quadratic", or "negative_quadratic"
+# quadratic is most realistic to actual air drag
+# negative_quadratic feels more aggressive
+function = "negative_quadratic"
+
+# Time window in milliseconds over which speed is calculated
+# Higher values make slow motions smoother but more delayed
+window = 100
+
+[stretch]
+# Controls how much the cursor is stretched (speed in px/s for full stretch)
+# Full stretch means 2x the original length
+limit = 3000.0
+
+# Activation function: "linear", "quadratic", or "negative_quadratic"
+function = "quadratic"
+
+# Time window in milliseconds over which speed is calculated
+window = 100
+
+[shake]
+# Enable shake to find feature
+enabled = true
+
+# Use nearest-neighbor (pixelated) scaling when shaking
+nearest = true
+
+# Controls how soon a shake is detected (lower = sooner)
+threshold = 6.0
+
+# Magnification level immediately after shake starts
+base = 4.0
+
+# Magnification increase per second while continuing to shake
+speed = 4.0
+
+# How much the speed is influenced by current shake intensity
+influence = 0.0
+
+# Maximum magnification the cursor can reach (0 = no limit)
+limit = 0.0
+
+# Time in milliseconds the cursor stays magnified after shake ends
+timeout = 2000
+
+# Show cursor behavior (tilt, rotate, etc.) while shaking
+effects = false
