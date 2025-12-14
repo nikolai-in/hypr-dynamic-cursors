@@ -4,3 +4,7 @@ out
 .cache
 result
 notes.md
+
+# Rust build artifacts
+niri-dynamic-cursors/target/
+niri-dynamic-cursors/Cargo.lock
